@@ -19,14 +19,13 @@ type instance Inherits EtaPlugin = '[JavaPlugin]
 data Logger = Logger @java.util.logging.Logger
    deriving Class
 
-foreign import java unsafe "info" info :: JString -> Java a ()
+foreign import java unsafe info :: JString -> Java Logger ()
 
 foreign import java unsafe "@interface getLogger" getLogger :: (p <: Plugin) => Java p Logger
 
 onEnable :: Java EtaPlugin ()
 onEnable = do
-   logger <- getLogger
-   info "Hello from Eta!"
-   return ()
+	logger <- getLogger
+	logger <.> info "Hello from Eta!"
 
 foreign export java "onEnable" onEnable :: Java EtaPlugin ()
