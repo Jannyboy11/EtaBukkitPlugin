@@ -2,3 +2,4 @@ name: EtaPlugin
 main: com.janboerman.hukkit.EtaPlugin
 version: 1.0
 author: Jannyboy11
+api-version: 1.13

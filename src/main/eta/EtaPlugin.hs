@@ -23,7 +23,6 @@ foreign import java unsafe "info" info :: JString -> Java a ()
 
 foreign import java unsafe "@interface getLogger" getLogger :: (p <: Plugin) => Java p Logger
 
-
 onEnable :: Java EtaPlugin ()
 onEnable = do
    logger <- getLogger

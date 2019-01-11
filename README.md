@@ -1,5 +1,9 @@
-# Eta Init
+# EtaPlugin
 
-This is a starter Eta project using Gradle.
+A bukkit plugin written in Eta, a dialect of Haskell for the JVM
 
-See [here](http://eta-lang.org/docs/user-guides/eta-user-guide/installation/gradle#requirements) for instructions.
+### How to compile
+`gradlew shadowJar` and the plugin will end up in the `build/libs` directory.
+
+### Known issues
+There is this nasty `"java.lang.ClassFormatError Illegal class name "" in class file etabukkitplugin/EtaPlugin"` when the plugin enables.
